@@ -26,7 +26,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatTooltipModule} from '@angular/material/tooltip';
+
+
 
 @NgModule({
   declarations: [],
@@ -59,7 +63,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
     MatNativeDateModule,
     MatDatepickerModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSliderModule,
+    MatTooltipModule
   ], exports: [
     MatToolbarModule,
     MatIconModule,
@@ -88,7 +94,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
     MatNativeDateModule,
     MatDatepickerModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSliderModule,
+    MatTooltipModule
   ]
 })
 export class MaterialModule { }

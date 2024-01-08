@@ -1,0 +1,97 @@
+.outer-container {
+  width: 375px;
+  height: 560px;
+  background-color: violet;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.image {
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+  object-position: 100% 100%;
+  border-radius: 50%;
+}
+
+h2 {
+  margin: 16px 0px 0px;
+}
+
+h4 {
+  margin: 16px 0px 16px;
+}
+
+.material-icons {
+  color: #000000;
+  font-size: 25px;
+}
+
+.material-icons:hover {
+  cursor: pointer;
+}
+
+mat-slider {
+  width: 250px;
+}
+
+.volume {
+  width: 90%;
+}
+
+.navigate_front {
+  transition: all 0.6s;
+  border-radius: 50%;
+  background-color: black;
+  padding: 10px;
+  color: violet;
+}
+
+.navigate_back {
+  transition: all 0.6s;
+  border-radius: 50%;
+  background-color: black;
+  padding: 10px;
+  color: violet;
+}
+
+.navigate_front:active {
+  transform: translateX(0.5rem);
+}
+
+.navigate_back:active {
+  transform: translateX(-0.5rem);
+}
+
+.song_container {
+  transform: translateX(0%);
+  transition: transform 1s ease-in-out;
+}
+
+.song_container.next_animation {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.song_container.previous_animation {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.favorite {
+  transition: all 1s ease-in-out;
+  padding: 6px;
+  font-size: 16px;
+  border-radius: 50%;
+  color: rgb(5, 5, 5);
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  right: -12px;
+  top: 146px;
+}
+
+.favorite:hover {
+  color: violet;
+  background-color: rgb(8, 8, 8);
+  transform: scale(1.1);
+}

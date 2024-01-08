@@ -1,1 +1,30 @@
-<p>home works!</p>
+<div fxLayoutAlign="center center" style="height: 100%; width: 100%;">
+  <div fxLayoutAlign="center center">
+    <div fxLayoutAlign="center center" fxLayout="row" class="outer-container">
+      <div fxLayoutAlign="center center" fxLayout="column">
+        <div class="song_container"
+          [ngClass]="{'next_animation': frontAnimation,'': !frontAnimation, 'previous_animation': prevAnimation}"
+          fxLayoutAlign="center center" fxLayout="column">
+          <img class="image" [src]="data[selectedSong].image" />
+          <span class="material-icons favorite"  matTooltip="Add to Favorite" matTooltipPosition="below">favorite</span>
+          <h2>{{data[selectedSong].name}}</h2>
+          <h4>{{data[selectedSong].author}}</h4>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center" style="width: 64%;">
+          <span class="material-icons navigate_back" (click)="playPrevious()">fast_rewind</span>
+          <span class="material-icons" style="  font-size: 80px;" (click)="togglePlay()">{{ play ? 'pause_circle_filled'
+            : 'play_circle_filled'}}</span>
+          <span class="material-icons navigate_front" (click)="playNext()">fast_forward</span>
+        </div>
+        <div class="volume" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="4%">
+          <span class="material-icons"
+            [ngClass]="{'volume_off': value === 0, 'volume_down': value > 0 && value < 0.60, 'volume_up': value >= 0.60}">
+            {{value === 0 ? 'volume_off' : (value < 0.60 ? 'volume_down' : 'volume_up' )}} </span>
+              <mat-slider [max]="1" [min]="0" [step]="0.01" (input)="volumeControl($event)">
+                <input matSliderThumb [(ngModel)]="value">
+              </mat-slider>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
