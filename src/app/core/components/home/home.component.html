@@ -1,16 +1,17 @@
-<div fxLayoutAlign="center center" style="height: 100%; width: 100%;">
+<div fxLayoutAlign="start center" fxLayoutAlign.lt-sm="center center" style="height: 100%; width: 100%;padding: 20px 20px 20px 40px">
   <div fxLayoutAlign="center center">
     <div fxLayoutAlign="center center" fxLayout="row" class="outer-container">
-      <div fxLayoutAlign="center center" fxLayout="column">
-        <div class="song_container"
-          [ngClass]="{'next_animation': frontAnimation,'': !frontAnimation, 'previous_animation': prevAnimation}"
-          fxLayoutAlign="center center" fxLayout="column">
+      <div fxLayoutAlign="start start" fxLayoutAlign.lt-sm="center center" fxLayout="column" fxLayoutGap="3%" fxLayoutGap.lt-sm="0">
+        <div class="song_container" fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center center" fxLayoutGap="5%" fxLayoutGap.lt-sm="0"
+          [ngClass]="{'next_animation': frontAnimation,'': !frontAnimation, 'previous_animation': prevAnimation}">
           <img class="image" [src]="data[selectedSong].image" />
           <span class="material-icons favorite"  matTooltip="Add to Favorite" matTooltipPosition="below">favorite</span>
-          <h2>{{data[selectedSong].name}}</h2>
+          <div fxLayout="column" fxLayoutGap="6%">
+            <h2>{{data[selectedSong].name}}</h2>
           <h4>{{data[selectedSong].author}}</h4>
+          </div>          
         </div>
-        <div fxLayout="row" fxLayoutAlign="space-between center" style="width: 64%;">
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="8%">
           <span class="material-icons navigate_back" (click)="playPrevious()">fast_rewind</span>
           <span class="material-icons" style="  font-size: 80px;" (click)="togglePlay()">{{ play ? 'pause_circle_filled'
             : 'play_circle_filled'}}</span>

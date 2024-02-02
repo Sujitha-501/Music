@@ -1,25 +1,23 @@
 .outer-container {
-  width: 375px;
-  height: 560px;
-  background-color: violet;
+  // width: 375px;
+  // height: 560px;
+  // background-color: violet;
   overflow: hidden;
   border-radius: 15px;
 }
 
 .image {
-  height: 180px;
-  width: 180px;
+  height: 250px;
+  width: 280px;
   object-fit: cover;
   object-position: 100% 100%;
-  border-radius: 50%;
+  border-radius: 15px;
 }
 
 h2 {
-  margin: 16px 0px 0px;
-}
-
-h4 {
-  margin: 16px 0px 16px;
+  font-size: 65px;
+  font-weight: 600;
+  line-height: 63px;
 }
 
 .material-icons {
@@ -35,9 +33,9 @@ mat-slider {
   width: 250px;
 }
 
-.volume {
-  width: 90%;
-}
+// .volume {
+//   width: 90%;
+// }
 
 .navigate_front {
   transition: all 0.6s;
@@ -68,15 +66,15 @@ mat-slider {
   transition: transform 1s ease-in-out;
 }
 
-.song_container.next_animation {
-  opacity: 0;
-  transform: translateX(100%);
-}
+// .song_container.next_animation {
+//   opacity: 0;
+//   transform: translateX(100%);
+// }
 
-.song_container.previous_animation {
-  opacity: 0;
-  transform: translateX(-100%);
-}
+// .song_container.previous_animation {
+//   opacity: 0;
+//   transform: translateX(-100%);
+// }
 
 .favorite {
   transition: all 1s ease-in-out;
@@ -86,12 +84,40 @@ mat-slider {
   color: rgb(5, 5, 5);
   background-color: rgb(255, 255, 255);
   position: absolute;
-  right: -12px;
-  top: 146px;
+  left: 265px;
+  bottom: -17px;
 }
 
 .favorite:hover {
   color: violet;
   background-color: rgb(8, 8, 8);
   transform: scale(1.1);
+}
+
+@media screen and (max-width:599px) {
+
+  .image {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+  }
+
+  h2 {
+    margin: 16px 0px 0px;
+    font-size: 20px !important;
+    line-height: 32px !important;
+  }
+
+  h4 {
+    margin: 16px 0px 16px;
+    font-size: 16px !important;
+  }
+
+  .favorite {
+    right: -12px !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+  }
+
 }

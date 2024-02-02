@@ -1,0 +1,60 @@
+/* nav-drawer-pin.component.scss */
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav-width {
+  width: 300px;
+  background-color: black;
+  padding: 20px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.active {
+  background-color: rgba(211, 211, 211, 0.08);
+}
+
+.image {
+  height: 125px;
+  width: 100%;
+  padding-left: 20px;
+}
+
+img{
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+.example-app-name{
+  color: primary;
+}
+
+span{
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.custom-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+}
+
+.wholepage-container{
+  background-color: violet;
+  height: 100%;
+}
+
+.wholepage-container {
+  filter: blur(0); /* Default value when sidenav is closed */
+}
+
+.mat-sidenav-open .wholepage-container {
+  filter: blur(4px); /* Adjust the blur effect when sidenav is open */
+}
+
+
