@@ -1,0 +1,64 @@
+.background {
+  background-image: url('../../../../assets/background.jpg');
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.inner-content {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.inner-content>h1 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 65px;
+  font-weight: 600;
+  font-family: 'Helvetica', sans-serif;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 10px #ff4081;
+}
+
+.inner-content>h4 {
+  margin-right: 40px;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.navigate-button {
+  background: linear-gradient(135deg, #ff4081, #e00070);
+  padding: 1em 2em;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(255, 64, 129, 0.5);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navigate-button:hover {
+  cursor: pointer;
+  background: linear-gradient(135deg, #e00070, #ff4081);
+  box-shadow: 0 0 25px rgba(255, 64, 129, 0.7);
+}
+
+@media screen and (max-width: 966px) {
+
+  .inner-content {
+    margin: 25px;
+  }
+
+  .inner-content>h1 {
+    line-height: 60px
+  }
+}

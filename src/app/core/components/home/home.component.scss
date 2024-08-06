@@ -42,7 +42,7 @@ mat-slider {
   border-radius: 50%;
   background-color: black;
   padding: 10px;
-  color: violet;
+  color: #ff4081;
 }
 
 .navigate_back {
@@ -50,7 +50,7 @@ mat-slider {
   border-radius: 50%;
   background-color: black;
   padding: 10px;
-  color: violet;
+  color: #ff4081;
 }
 
 .navigate_front:active {
@@ -89,7 +89,7 @@ mat-slider {
 }
 
 .favorite:hover {
-  color: violet;
+  color: #ff4081;
   background-color: rgb(8, 8, 8);
   transform: scale(1.1);
 }
